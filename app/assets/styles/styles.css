@@ -1,0 +1,10 @@
+body {
+  color: orange;
+}
+$mainBlue: #2f5572;
+header {
+  p {
+    color: $mainBlue;
+    font-size: 4rem;
+  }
+}
