@@ -6,13 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Personal Portfolio, Front end web development, UX developer" />
     <meta name="description" content="Personal Portfolio to show case for front end web development" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
     <title>Portfolio</title>
   </head>
   <body>
-    <h1>My first Portfolio</h1>
-    <header>
-      <p>testing css</p>
+    <header class="site-header">
+      <p>Navigation here</p>
     </header>
+    <div class="large-hero">
+      <video class="large-hero__video" loop muted autoplay playsinline preload="auto" poster="assets/images/poster.jpg">
+        <source src="assets/videos/computerLandscape-480-60fps.mp4" type="video/mp4" />
+        <source src="assets/videos/computerLandscape-480-60fps.webm" type="video/webm" />
+      </video>
+      <div class="large-hero__text-content">
+        <div class="wrapper">
+          <h1 class="title-style">UX Developer</h1>
+          <h2 class="title-style">Build websites using the modern skills, tools, and best-practices</h2>
+          <ul>
+            <li>Mobile First responsive website</li>
+            <li>Write organized, well structured JavaScript and CSS</li>
+          </ul>
+          <p></p>
+        </div>
+      </div>
+    </div>
     <script src="bundled.js"></script>
   </body>
 </html>

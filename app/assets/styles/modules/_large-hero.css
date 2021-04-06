@@ -1,0 +1,12 @@
+.large-hero {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  &__video {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: cover;
+  }
+  &__text-content {
+  }
+}

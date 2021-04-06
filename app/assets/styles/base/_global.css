@@ -1,0 +1,10 @@
+body {
+  font-family: "Fauna One", serif;
+}
+.title-style {
+  font-family: "Playfair Display", serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
