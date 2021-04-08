@@ -7,7 +7,7 @@
     <meta name="keywords" content="Personal Portfolio, Front end web development, UX developer" />
     <meta name="description" content="Personal Portfolio to show case for front end web development" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,700&family=Poppins:wght@100;400;500;600;700&display=swap" rel="stylesheet" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -15,19 +15,37 @@
       <p>Navigation here</p>
     </header>
     <div class="large-hero">
-      <video class="large-hero__video" loop muted autoplay playsinline preload="auto" poster="assets/images/poster.jpg">
-        <source src="assets/videos/computerLandscape-480-60fps.mp4" type="video/mp4" />
-        <source src="assets/videos/computerLandscape-480-60fps.webm" type="video/webm" />
-      </video>
+      <div class="large-hero__background">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+
+      <picture class="large-hero__image">
+        <div class="large-hero__image-grid-wrapper">
+          <img src="assets/images/html_3.png" alt="Banner Image" />
+          <img src="assets/images/css_3.png" alt="Banner Image" />
+          <img src="assets/images/js_2.png" alt="Banner Image" />
+          <img src="assets/images/vs_2.png" alt="Banner Image" />
+          <img src="assets/images/wbPacl.png" alt="Banner Image" />
+          <img src="assets/images/react_1.png" alt="Banner Image" />
+          <img src="assets/images/sass_1.png" alt="Banner Image" />
+          <img src="assets/images/git_3.png" alt="Banner Image" />
+        </div>
+      </picture>
+
       <div class="large-hero__text-content">
-        <h1 class="title-style large-hero__title">UX/UI Developer</h1>
-        <h2 class="title-style large-hero__subtitle">Build websites using the modern skills, tools, &amp; best-practices</h2>
-        <ul class="large-hero__description">
-          <li>Mobile First responsive website</li>
-          <li>Write organized, well structured JavaScript and CSS</li>
-        </ul>
+        <h1 class="heading-style large-hero__title">UX/UI Developer</h1>
+        <h2 class="heading-style large-hero__subtitle">Build websites using the modern skills, tools &amp; best-practices</h2>
+        <div class="large-hero__description">
+          <p>Mobile-First responsive website</p>
+          <p>Write organized, well structured JavaScript and CSS</p>
+        </div>
       </div>
     </div>
+
     <script src="bundled.js"></script>
   </body>
 </html>

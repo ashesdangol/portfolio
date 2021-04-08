@@ -1,6 +1,8 @@
 @import "normalize.css";
-@import "base/_global.css";
 @import "base/_variable.css";
-@import "base/_mixin.css";
+@import "base/_mixinVariables.css";
+@import "base/_global.css";
+@import "base/_mixins.css";
 @import "modules/_site-header.css";
 @import "modules/_large-hero.css";
+@import "modules/_cube-animation.css";

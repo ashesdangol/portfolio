@@ -1,5 +1,16 @@
-$mainBlue: #4a148c;
-$mainRed: #f44336;
-$mainRed-light: #ffcdd2;
-$textShadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+$blue: #17252a;
+$greenDark: #2b7a78;
+$green: #3aafa9;
+$greenLight: #def2f1;
+$whitish: #feffff;
+$textShadow: 1px 3px 4px $blue;
 $boxShadow: 0 8px 17px 2px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%), 0 5px 5px -3px rgb(0 0 0 / 20%);
+$boxShadow-large: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);
+
+$blueMain: #2196f3;
+$blueOptional: #1976d2;
+$redAccent: #ef5350;
+
+$orangeMain: #ff5722;
+$orangeOptional: #ff6e40;
+$yellowAccent: #fbc02d;

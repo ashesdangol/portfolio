@@ -1,0 +1,137 @@
+.large-hero {
+  width: 100%;
+  height: 650px;
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  overflow: hidden;
+  @mixin atSmall {
+    background: none;
+  }
+}
+
+.large-hero__text-content {
+  grid-column: 2 / span 10;
+  grid-row: 3 / span 8;
+  text-align: center;
+  border: 1px solid red;
+}
+
+.large-hero__title {
+  font-size: 3rem;
+  color: $whitish;
+  font-weight: 700;
+  @add-mixin embossedText;
+}
+.large-hero__subtitle {
+  position: relative;
+  left: -10%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: $boxShadow-large;
+  padding: 0.5rem 1rem;
+  width: 100vw;
+  grid-row: 1;
+  grid-column: 1;
+}
+.large-hero__description {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $whitish;
+  text-shadow: $textShadow;
+}
+
+.large-hero__image {
+  @mixin atMaxSmallest {
+    display: none;
+  }
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 12;
+  border: 1px solid red;
+  img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* ============= Animation background ========= */
+.large-hero__background {
+  opacity: 0.3;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  grid-column: 1 / span 12;
+  grid-row: 1 / span 12;
+  @mixin atSmall {
+    &--mobile {
+      display: none !important;
+    }
+  }
+}
+.cube {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px $whitish;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 12s ease-in forwards infinite;
+}
+
+.cube:nth-child(2n) {
+  border-color: #fff;
+}
+.cube:nth-child(2) {
+  animation-delay: 2s;
+  left: 25vw;
+  top: 40vh;
+}
+.cube:nth-child(3) {
+  animation-delay: 4s;
+  left: 75vw;
+  top: 50vh;
+}
+.cube:nth-child(4) {
+  animation-delay: 6s;
+  left: 90vw;
+  top: 10vh;
+}
+.cube:nth-child(5) {
+  animation-delay: 8s;
+  left: 10vw;
+  top: 85vh;
+}
+.cube:nth-child(6) {
+  animation-delay: 10s;
+  left: 50vw;
+  top: 10vh;
+}
+
+/* Animate Background*/
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}

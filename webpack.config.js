@@ -1,7 +1,7 @@
 // node library to generate absolute path
 const path = require("path")
 
-const postCSSPlugins = [require("postcss-import"), require("postcss-simple-vars"), require("postcss-nested"), require("autoprefixer")]
+const postCSSPlugins = [require("postcss-import"), require("postcss-simple-vars"), require("postcss-nested"), require("postcss-mixins"), require("autoprefixer"), require("postcss-hexrgba")]
 
 module.exports = {
   entry: "./app/assets/scripts/App.js",

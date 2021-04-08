@@ -1,12 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Fauna One", serif;
+  font-family: "PT Serif", serif;
+  color: $blue;
 }
-.title-style {
-  font-family: "Playfair Display", serif;
+
+.heading-style {
+  font-family: "Poppins", sans-serif;
 }
+
 img {
   max-width: 100%;
   height: auto;

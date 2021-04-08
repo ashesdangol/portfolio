@@ -1,6 +1,7 @@
 .site-header {
   position: fixed;
-  top: 0;
-  color: #fff;
-  z-index: 10;
+  background: transparent;
+  color: $whitish;
+  width: 100%;
+  z-index: 1;
 }

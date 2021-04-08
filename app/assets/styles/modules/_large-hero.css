@@ -1,55 +1,79 @@
 .large-hero {
-  position: relative;
+  @mixin atMaxSmallest {
+    min-height: 640px;
+    height: 65vh;
+    .large-hero__image {
+      display: none;
+    }
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  }
+  @mixin atSmall {
+    .large-hero__background {
+      display: none;
+    }
+    background: $redAccent;
+  }
+  min-height: 640px;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(60vh, 95vh);
-  justify-items: end;
-  align-items: center;
-
-  &::after {
-    position: absolute;
-    content: " ";
-    height: 100%;
-    width: 100%;
-    background: url("assets/images/3px-tile.png");
-  }
-  &__video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  text-align: center;
   &__text-content {
-    position: absolute;
-    z-index: 2;
-    padding: 0 2rem;
-    text-align: right;
-    border-right: 10px solid $mainRed;
+    position: relative;
+    align-self: center;
+    grid-column: 1;
+    grid-row: 1;
   }
   &__title {
-    font-size: 4.8rem;
-    text-shadow: $textShadow;
+    font-size: 3rem;
+    color: $whitish;
+    font-weight: 700;
+    text-align: center;
+    @add-mixin embossedText;
+    @mixin atMaxSmallest {
+      color: $whitish;
+    }
+    @mixin atSmall {
+      color: $blueMain;
+    }
   }
   &__subtitle {
-    font-size: 1.4rem;
-    text-shadow: $textShadow;
-    background: #fff;
-    padding: 1rem;
-    box-shadow: $boxShadow;
-  }
-  &__description {
     font-size: 1.2rem;
-    font-weight: 600;
-    text-shadow: $textShadow;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-    li {
-      padding: 1rem;
-      margin-bottom: 15px;
-      background: #fff;
-      box-shadow: $boxShadow;
+    font-weight: bold;
+    padding: 1rem;
+    box-shadow: $boxShadow-large;
+
+    @mixin atSmall {
+      font-size: 2rem;
     }
+  }
+  .large-hero__description {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $whitish;
+    text-shadow: $textShadow;
+  }
+  &__image {
+    grid-column: 1;
+    grid-row: 1;
+    border: 1px solid blue;
+    img {
+      width: 100px;
+      height: 100px;
+      opacity: 0.2;
+    }
+    /*&::before {
+      position: absolute;
+      content: " ";
+      height: 100%;
+      width: 100%;
+       background: url("assets/images/3px-tile.png");
+      background-color: $greenLight;
+      opacity: 0.5;
+      display: block;
+    }*/
+    overflow: hidden;
+    position: relative;
   }
 }

@@ -1,0 +1,10 @@
+@define-mixin embossedText {
+  text-shadow: $textShadow;
+  background-clip: text;
+}
+
+@define-mixin engravedText {
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(245, 245, 245, 0.5) 3px 5px 1px;
+}
