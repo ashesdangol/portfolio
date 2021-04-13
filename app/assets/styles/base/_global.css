@@ -1,8 +1,11 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
+  position: relative;
   font-family: "PT Serif", serif;
   color: $blue;
 }

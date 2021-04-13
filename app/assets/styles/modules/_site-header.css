@@ -4,4 +4,72 @@
   color: $whitish;
   width: 100%;
   z-index: 1;
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @mixin atLarge {
+    }
+  }
+  &__logo {
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: $boxShadow-large;
+    width: 4.5rem;
+    height: 4.5rem;
+    @mixin atLarge {
+      width: 5.312rem;
+      height: 5.312rem;
+    }
+    margin-top: 0.5rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &-img {
+      width: 4.5rem;
+      height: 4.5rem;
+      @mixin atLarge {
+        width: 5.312rem;
+        height: 5.312rem;
+      }
+    }
+  }
+  &__menu-content {
+    display: none;
+    @mixin atLarge {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+  &__menu-btn {
+    height: 40px;
+    width: 40px;
+    background-color: $whitish;
+    border: 1px dashed black;
+    @mixin atLarge {
+      display: none;
+    }
+  }
+}
+
+.primary-nav {
+  &__wrapper {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+  &__link {
+    padding: 0.8125rem 2rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: $blue;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
 }
