@@ -5,12 +5,8 @@
   width: 100%;
   z-index: 1;
   &__content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    @mixin atLarge {
-    }
+    display: grid;
+    grid-template-columns: 8% 1fr;
   }
   &__logo {
     border-radius: 100%;
@@ -42,8 +38,35 @@
       justify-content: flex-end;
       align-items: center;
     }
+    .primary-nav {
+      &__wrapper {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @mixin atLarge {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          margin-right: 1rem;
+        }
+      }
+      &__link {
+        padding: 0.8125rem 2rem;
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $blue;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
+      }
+    }
   }
+
   &__menu-btn {
+    justify-self: flex-end;
     height: 40px;
     width: 40px;
     background-color: $whitish;
@@ -54,22 +77,16 @@
   }
 }
 
-.primary-nav {
-  &__wrapper {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.site-header__menu-content--is-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1 / span 4;
+  @mixin atLarge {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: flex-end;
-    margin-right: 1rem;
-  }
-  &__link {
-    padding: 0.8125rem 2rem;
-    text-decoration: none;
-    font-size: 1.3rem;
-    color: $blue;
-    font-weight: bold;
-    font-family: "Poppins", sans-serif;
+    align-items: center;
+    grid-column: 2;
   }
 }
