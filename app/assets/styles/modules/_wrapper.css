@@ -1,4 +1,7 @@
 .wrapper {
   padding: 0 1rem;
   width: 100%;
+  @mixin atLarge {
+    padding: 0 2rem;
+  }
 }

@@ -1,16 +1,17 @@
 class MobileMenu {
   constructor() {
-    this.menuBtn = document.querySelector(".site-header__menu-btn")
+    this.menuIcon = document.querySelector(".site-header__menu-btn")
     this.menuContent = document.querySelector(".site-header__menu-content")
     this.siteHeader = document.querySelector(".site-header")
     this.events()
   }
   events() {
-    this.menuBtn.addEventListener("click", () => this.toggleTheMenu())
+    this.menuIcon.addEventListener("click", () => this.menuToggle())
   }
-  toggleTheMenu() {
-    this.menuContent.classList.toggle("site-header__menu-content--is-visible")
-    this.siteHeader.classList.toggle("site-header--is-expanded")
+  menuToggle() {
+    this.menuContent.classList.toggle("site-header__menu-content--is-expanded")
+    this.siteHeader.classList.toggle("site-header--bg-visibile")
+    this.menuIcon.classList.toggle("site-header__menu-btn--close-x")
   }
 }
 

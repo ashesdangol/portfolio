@@ -4,6 +4,7 @@
   color: $whitish;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+  cursor: pointer;
   &--green {
     background-color: $redAccent;
   }
