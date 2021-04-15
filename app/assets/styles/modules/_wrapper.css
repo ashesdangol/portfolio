@@ -3,5 +3,13 @@
   width: 100%;
   @mixin atLarge {
     padding: 0 2rem;
+    &--narrow {
+      padding: 0 10rem;
+    }
+  }
+  @mixin atLargest {
+    &--narrow {
+      padding: 0 20rem;
+    }
   }
 }

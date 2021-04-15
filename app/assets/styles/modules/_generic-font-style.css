@@ -1,0 +1,30 @@
+.generic-fonts {
+  h1 {
+    font-size: 3.3125rem;
+    font-weight: normal;
+    line-height: 3.687rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.9375rem;
+    font-weight: 500;
+  }
+  p {
+    line-height: 1.875rem;
+    font-size: 1.31rem;
+    margin: 0 0 1.8rem 0;
+    font-weight: 300;
+    @mixin atSmall {
+      font-size: 1.125rem;
+    }
+  }
+  p a {
+    font-weight: 700;
+  }
+
+  &__header {
+    &--center {
+      text-align: center;
+    }
+  }
+}

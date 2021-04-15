@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__image-wrapper {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+    box-shadow: $boxShadow;
+    @mixin atMedium {
+      width: 200px;
+      height: 200px;
+    }
+    @mixin atLarge {
+      width: 250px;
+      height: 250px;
+    }
+    img {
+      margin-top: 10px;
+    }
+  }
+  &__contents {
+    @mixin atMedium {
+      max-width: 650px;
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+  margin-bottom: 2rem;
+}
+
+.card--alternate {
+  .card {
+    box-shadow: $boxShadow;
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  @mixin atLarge {
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      padding: 3rem 1rem;
+      margin-bottom: 3rem;
+      &__image-wrapper {
+        justify-self: center;
+      }
+      &__contents {
+      }
+    }
+
+    .card:nth-child(even) {
+      .card__contents {
+        .card__title {
+          text-align: left;
+        }
+      }
+    }
+    .card:nth-child(odd) {
+      .card__image-wrapper {
+        grid-row: 1;
+        grid-column: 2;
+      }
+      .card__contents {
+        text-align: right;
+      }
+    }
+    .card:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
