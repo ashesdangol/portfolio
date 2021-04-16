@@ -8,6 +8,9 @@
   }
   &__content-wrapper {
     padding-top: 1rem;
+    @mixin atLarge {
+      margin-top: 0;
+    }
   }
   &__logo {
     position: absolute;
@@ -23,6 +26,7 @@
       height: 110px;
     }
   }
+
   &__menu-btn {
     position: absolute;
     right: 1.5rem;
@@ -101,6 +105,9 @@
           color: $whitish !important;
         }
       }
+      a {
+        transition: all 0.3s ease-out;
+      }
     }
     &--is-expanded {
       display: flex;
@@ -130,6 +137,19 @@
     a {
       padding: 1rem;
       font-size: 1.49rem;
+    }
+  }
+  &--small-nav-items {
+    @mixin atLarge {
+      .nav-items {
+        a {
+          transition: all 0.3s ease-out;
+          font-size: 1.1rem;
+        }
+      }
+      .site-header__logo {
+        transform: scale(0.8);
+      }
     }
   }
 }
