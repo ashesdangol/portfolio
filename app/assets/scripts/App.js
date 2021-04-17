@@ -1,7 +1,7 @@
 import "../styles/styles.css"
 import MobileMenu from "./modules/MobileMenu"
 import RevealItems from "./modules/RevealItems"
-import StickyHeader from "./modules/_stickyHeader"
+import StickyHeader from "./modules/StickyHeader"
 
 if (module.hot) {
   module.hot.accept()
