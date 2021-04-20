@@ -2,7 +2,6 @@ class VideoSlider {
   constructor() {
     this.iframeVideo = document.querySelector(".gamer-video__iframe")
     this.gameList = document.querySelectorAll(".gamer-video__navigation li")
-
     this.grabLinks()
   }
 
@@ -13,7 +12,7 @@ class VideoSlider {
   }
 
   transferLink(tt) {
-    this.iframeVideo.setAttribute("src", tt + "?rel=0&amp;autoplay=1;")
+    this.iframeVideo.setAttribute("src", tt + "?rel=0&amp;autoplay=1;showinfo=0?ecver=2;")
   }
 }
 
