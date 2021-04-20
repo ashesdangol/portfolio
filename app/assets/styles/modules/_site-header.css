@@ -1,6 +1,6 @@
 .site-header {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   &--bg-visibile {
     background-color: rgba(#17252a, 0.98);
@@ -19,7 +19,7 @@
   }
   &__logo {
     position: absolute;
-    z-index: 2;
+    z-index: 20;
     width: 85px;
     height: 85px;
     border-radius: 50%;
