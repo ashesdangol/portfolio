@@ -5,7 +5,12 @@
   &--bg-visibile {
     background-color: rgba(#17252a, 0.98);
     box-shadow: $boxShadow;
+    @mixin atLarge {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
   }
+
   &__content-wrapper {
     padding-top: 1rem;
     @mixin atLarge {
