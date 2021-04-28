@@ -1,0 +1,7 @@
+#features {
+  background-color: #2e2e2e;
+  color: $whitish;
+  .features {
+    margin-bottom: 4rem;
+  }
+}

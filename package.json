@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ashesdangol/portfolio#readme",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1"
   },

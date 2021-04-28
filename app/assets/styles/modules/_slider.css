@@ -1,0 +1,13 @@
+.splide--nav {
+  .splide__track {
+    .splide__list {
+      .splide__slide.is-active {
+        border-color: $whitish !important;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+.splide {
+  margin: 0 auto;
+}
