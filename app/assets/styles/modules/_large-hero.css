@@ -12,7 +12,7 @@
     .large-hero__background {
       display: none;
     }
-    background: $orangeOptional;
+    background: #0c78bc40;
   }
   min-height: 640px;
   height: 90vh;
