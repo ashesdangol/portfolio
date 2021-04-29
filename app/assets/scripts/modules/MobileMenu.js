@@ -31,9 +31,6 @@ class MobileMenu {
     if (this.browserWidth < 1020) {
       this.checkBrowserWidth()
     }
-
-    console.log(this.browserWidth)
-    console.log("cal ran")
   }
 
   checkBrowserWidth() {

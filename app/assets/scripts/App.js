@@ -1,14 +1,17 @@
 import "../styles/styles.css"
+import "lazysizes"
 import MobileMenu from "./modules/MobileMenu"
 import RevealItems from "./modules/RevealItems"
 import StickyHeader from "./modules/StickyHeader"
 import VideoSlider from "./modules/VideoSlider"
 import Splide from "@splidejs/splide"
+import Modal from "./modules/Modal"
 
 if (module.hot) {
   module.hot.accept()
 }
 
+new Modal()
 let mobileMenu = new MobileMenu()
 new RevealItems(document.querySelectorAll(".about-me .card"), 75)
 new RevealItems(document.querySelectorAll(".features"), 75)
@@ -22,7 +25,7 @@ new Splide("#thumbnail__slider", {
   height: 400,
   pagination: false,
   isNavigation: true,
-  lazyLoad: "sequential",
+  lazyLoad: "nearby",
   focus: "center",
   pagination: true,
   breakpoints: {
@@ -58,6 +61,8 @@ var view = new Splide("#features__gallery__view", {
   heightRatio: 0.7,
   pagination: false,
   arrows: false,
+  perPage: 1,
+  lazyLoad: "nearby",
   cover: true,
   breakpoints: {
     600: {
